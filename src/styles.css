@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-2: rgb(148, 163, 184);
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+}
+
+
+
+
+body{
+    background-color: rgb(15 23 42 / 1);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
