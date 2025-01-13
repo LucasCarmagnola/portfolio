@@ -4,23 +4,26 @@
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 .main{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 730px;
     padding: 30px;
-    padding-left: 15%;
-    padding-top: 130px;
+    padding-left: 5%;
+    padding-top: 100px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .main h1 {
     font-size: 48px;
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 0;
     cursor: pointer;
+    padding: 0;
 }
 .main h2 {
     font-weight: 300;
@@ -28,7 +31,7 @@
 
 .main p{
     color: rgb(148, 163, 184);
-    width: 60%;
+    width: 400px;
     margin-bottom: 60px;
     text-align: start;
 }
@@ -64,19 +67,25 @@
 .container-content{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding: 30px;
+    width: 730px;
+    /* padding: 30px; */
     align-items: center;
     box-sizing: border-box;
-    padding-top: 130px;
-    align-items: flex-start;
+    padding-top: 100px;
 }
 
 .content{
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     color: #94a3b8;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.content p{
+    margin-top: 0;
 }
 .projects{
     display: flex;
@@ -154,11 +163,12 @@
 @media (max-width: 1200px){
     .component{
         flex-direction: column;
+        align-items: center;
     }
     .main{
         width: 100%;
         align-items: center;
-        padding: 0;
+        padding-top: 50px;
     }
     .main p{
         width: 100%;
@@ -166,7 +176,7 @@
         text-align: center;
     }
     .container-content{
-        width: 100%;
+        width: 700px;
         align-items: center;
     }
 }
