@@ -26,6 +26,14 @@ export class HomeComponent {
   
   }
 
+  goLink(link:string){
+    if (link) {
+      window.open(link, '_blank', 'noopener,noreferrer')
+    } else {
+      console.error('No se proporcionó un enlace válido.')
+    }
+  }
+
   
   
   // ngOnInit() {
