@@ -7,10 +7,10 @@ export const routes: Routes = [
         path: 'home', loadComponent: () => import('./common/components/home/home.component')
         .then((c) => c.HomeComponent)
     },
-    {
-        path: 'clinic', loadComponent: () => import('./common/components/clinica/clinica.component')
-        .then((c) => c.ClinicaComponent)
-    }
+    // {
+    //     path: 'clinic', loadComponent: () => import('./common/components/clinica/clinica.component')
+    //     .then((c) => c.ClinicaComponent)
+    // }
 ];
 
 

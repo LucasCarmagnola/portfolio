@@ -1,4 +1,50 @@
+.idioma{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+.idioma div {
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+}
 
+
+.idioma svg {
+    fill: #94a3b8; 
+    transition: fill 0.3s ease;
+}
+
+.idioma:hover {
+    .flecha{
+        fill: #ffffff; 
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a386344;
+    width: 60px;
+    margin-top: 5px;
+}
+
+.menu img{
+    height: 20px;
+    width: 20px;
+}
+.option:first-child{
+    margin-top: 5px;
+}
+.option{
+    margin-bottom: 5px;
+}
 
 .component{
     display: flex;
@@ -15,7 +61,11 @@
     padding-left: 5%;
     padding-top: 100px;
     box-sizing: border-box;
-    position: relative;
+    position: sticky; top: 0;
+    height: 100vh;
+}
+p{
+    line-height: 1.5;
 }
 
 .main h1 {
@@ -100,6 +150,7 @@
     box-sizing: border-box;
     padding: 15px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .imagen{
@@ -132,7 +183,8 @@
 }
 
 .project:hover{
-    background-color: rgba(102, 102, 113, 0.274);
+    background-color: rgba(104, 104, 125, 0.088);
+    box-shadow: 0px 4px 10px rgba(72, 76, 115, 0.402);
     .name{
         color: rgb(94, 234, 212);
     }

@@ -10,18 +10,49 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
 
+  protected traduccion : boolean = false
+  menu : boolean = false;
+  idioma : string = 'EN';
+
 
   ngOnInit() {
-    const leftContainer = document.querySelector('.main') as HTMLElement;
+    
+    window.onclick = (event: MouseEvent) => {
+      const menu = document.getElementById('menu');
+      if (this.menu && menu) {
+        this.menu = false;
+      }
+    }
   
-    if (leftContainer) {
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  }
+
   
-      // Escucha el evento de scroll del documento
-      window.addEventListener('scroll', () => {
-        const scrollY = Math.min(window.scrollY, maxScroll); // Limita el desplazamiento máximo
-        leftContainer.style.top = `${scrollY}px`; // Mueve el contenedor izquierdo
-      });
+  
+  // ngOnInit() {
+  //   const leftContainer = document.querySelector('.main') as HTMLElement;
+    
+  //   if (leftContainer) {
+  //     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      
+  //     window.addEventListener('scroll', () => {
+  //       const scrollY = Math.min(window.scrollY, maxScroll); // Limita el desplazamiento máximo
+  //       leftContainer.style.top = `${scrollY}px`; // Mueve el contenedor izquierdo
+  //     });
+  //     // Escucha el evento de scroll del documento
+  //   }
+  // }
+  
+  cambiarMenu(){
+    this.menu = !this.menu
+  }
+
+  changeLanguage(idioma:string){
+    if(idioma === 'EN'){
+      this.traduccion = false
+      this.idioma = idioma
+    }else{
+      this.traduccion = true
+      this.idioma = idioma
     }
   }
   
