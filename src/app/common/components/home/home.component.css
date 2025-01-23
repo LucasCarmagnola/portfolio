@@ -35,6 +35,11 @@
     margin-top: 5px;
 }
 
+.vista-menu {
+    display: flex;
+    justify-content: center;
+}
+
 .menu img{
     height: 20px;
     width: 20px;
@@ -95,6 +100,11 @@ p{
     border: 1px var(--color-2) solid;
     border-radius: 10px;
     font-weight: 600;
+}
+
+.info:hover{
+    border: 1px rgb(94, 234, 212) solid;
+    color: rgb(94, 234, 212);
 }
 
 .redes{

@@ -13,6 +13,7 @@ export class HomeComponent {
   protected traduccion : boolean = false
   menu : boolean = false;
   idioma : string = 'EN';
+  bandera : string = 'eeuu-flag.png'
 
 
   ngOnInit() {
@@ -58,9 +59,11 @@ export class HomeComponent {
     if(idioma === 'EN'){
       this.traduccion = false
       this.idioma = idioma
+      this.bandera = 'eeuu-flag.png'
     }else{
       this.traduccion = true
       this.idioma = idioma
+      this.bandera = 'arg-flag.png'
     }
   }
   
