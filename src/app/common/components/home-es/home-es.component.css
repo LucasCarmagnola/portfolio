@@ -130,6 +130,7 @@ p{
     display: flex;
     flex-direction: column;
     width: 730px;
+    /* padding: 30px; */
     align-items: center;
     box-sizing: border-box;
     padding-top: 100px;

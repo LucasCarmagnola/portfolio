@@ -1,0 +1,161 @@
+.component{
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 100px;
+    height: 100dvh;
+}
+.container-content{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.back{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 175px;
+    position: relative;
+}
+.name{
+    position: absolute;
+    left: 28px;
+    color: rgb(94, 234, 212);
+    font-weight: 500;
+}
+
+.svg{
+    width: 40px;
+}
+
+.arrow-project{
+    position: absolute;
+    right: 150px;
+    top: 0;
+}
+
+.arrow-project{
+    transform: rotate(180deg); 
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
+.back:hover{
+    svg{
+        width: 40px;
+    }
+}
+
+.titulo{
+    font-size: 48px;
+    margin-top: 0;
+}
+
+
+table.projects {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+table.projects th,
+table.projects td {
+    border-bottom: 1px solid #94a3b862; 
+    padding: 20px 15px;
+    text-align: left;
+}
+
+table.projects th {
+    font-weight: bolder;
+    color: #ffffff;
+}
+  
+
+table.projects a {
+    color: #94a3b8; 
+    text-decoration: none; 
+}
+
+table.projects a:hover {
+    text-decoration: underline;
+    color: aqua; 
+}
+
+.tecnologia{
+    background-color: rgba(45, 212, 191, .1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: rgb(94, 234, 212);
+    font-size: 14px;
+    margin: 5px;
+}
+
+.tecnologia:first-child{
+    margin-left: 0;
+}
+
+
+
+
+
+
+#tabs-example {
+    background: #cecece;
+    padding: 8px 0 0 0;
+}
+  
+.nav {
+    list-style: none;
+    border-bottom: 1px solid #a0a0a0;
+    padding: 10px 10px 0 10px;
+    margin: 0; 
+}
+  
+.nav li {
+    display: inline-block; 
+    margin: 0; 
+}
+  
+.nav li.active a {
+    position: relative;
+    z-index: 1;
+    bottom: -2px;
+    margin-top: -2px;
+    background: #eee;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+  
+.nav li a {
+    display: inline-block; 
+    text-decoration: none;
+    position: relative;
+    padding: 7px 50px;
+    margin: 0 0 0 -8px; 
+    color: #222;
+    background: #d8d7d8;
+  
+    border-top-right-radius: 20px 40px;
+    border-top-left-radius: 20px 40px;
+  
+
+    box-shadow: inset 1px 1px 0 white;
+  
+    border: 1px solid #a0a0a0;
+    border-bottom: 0;
+}
+  
+.content {
+    min-height: 20px;
+    background: #eee;
+    box-shadow: inset 0 1px 0 white; 
+    padding: 10px; 
+}
+
+
+

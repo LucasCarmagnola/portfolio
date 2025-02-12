@@ -1,19 +1,19 @@
 import { Component, OnInit, Renderer2, ElementRef, HostListener } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home-es',
   standalone: true,
-  imports: [RouterModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [RouterLink],
+  templateUrl: './home-es.component.html',
+  styleUrl: './home-es.component.css'
 })
-export class HomeComponent {
+export class HomeEsComponent {
 
   protected traduccion : boolean = false
   menu : boolean = false;
-  idioma : string = 'EN';
-  bandera : string = 'eeuu-flag.png'
+  idioma : string = 'ES';
+  bandera : string = 'arg-flag.png'
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
@@ -49,9 +49,10 @@ export class HomeComponent {
         const originalBG = window.getComputedStyle(link).backgroundColor;
 
         link.addEventListener('mousemove', (e: MouseEvent) => {
-          const x = e.pageX - link.offsetLeft;
-          const y = e.pageY - link.offsetTop;
-          const lightColor = "rgba(255,255,255,0.8)";
+          const x = e.pageX - link.offsetLeft
+          const y = e.pageY - link.offsetTop
+          const lightColor = "rgba(55, 97, 221, 0.25)"
+          const gradientSize = 300;
 
           const bgWebKit = `-webkit-gradient(radial, ${x} ${y}, 0, ${x} ${y}, 100, from(${lightColor}), to(rgba(255,255,255,0.0))), ${originalBG}`;
           const bgMoz = `-moz-radial-gradient(${x}px ${y}px 45deg, circle, ${lightColor} 0%, ${originalBG} 100px)`;
@@ -82,24 +83,7 @@ export class HomeComponent {
       console.error('No se proporcionó un enlace válido.')
     }
   }
-
-  
-  
-  // ngOnInit() {
-  //   const leftContainer = document.querySelector('.main') as HTMLElement;
-    
-  //   if (leftContainer) {
-  //     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      
-  //     window.addEventListener('scroll', () => {
-  //       const scrollY = Math.min(window.scrollY, maxScroll); // Limita el desplazamiento máximo
-  //       leftContainer.style.top = `${scrollY}px`; // Mueve el contenedor izquierdo
-  //     });
-  //     // Escucha el evento de scroll del documento
-  //   }
-  // }
-  
-  cambiarMenu(){
+cambiarMenu(){
     this.menu = !this.menu
   }
 
@@ -123,33 +107,5 @@ export class HomeComponent {
     behavior: 'smooth' 
   });
   }
-  
-
-  // ngOnInit() {
-  //   const leftContainer = document.querySelector('.main') as HTMLElement;
-  
-  //   if (leftContainer) {
-  //     // Obtén el alto total de la página menos el alto del contenedor izquierdo
-  //     const maxScroll = document.documentElement.scrollHeight - leftContainer.offsetHeight;
-  
-  //     // Escucha el evento de scroll en el documento
-  //     window.addEventListener('scroll', () => {
-  //       const scrollY = Math.min(window.scrollY, maxScroll); // Limita el scroll máximo
-  //       leftContainer.style.transform = `translateY(${scrollY}px)`;
-  //     });
-  //   }
-  // }
-  
-  // ngOnInit() {
-  //   const leftContainer = document.querySelector('.main') as HTMLElement;
-  
-  //   if (leftContainer) {
-  //     // Escucha el evento de scroll en el documento
-  //     window.addEventListener('scroll', () => {
-  //       // Ajusta la posición vertical del contenedor izquierdo según el scroll de la página
-  //       leftContainer.style.transform = `translateY(${window.scrollY}px)`;
-  //     });
-  //   }
-  // }
 
 }
