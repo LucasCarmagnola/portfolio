@@ -134,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="project" (click)="goLink('https://www.tinkercad.com/things/dXqvk3uKDJJ-display-lcd')">
+            <div class="project" (click)="openModal('/video.mp4')">  <!-- (click)="goLink('https://www.tinkercad.com/things/dXqvk3uKDJJ-display-lcd')" -->
                 <div class="imagen">
                     <img src="cerradura.jpg" alt="project1">
                 </div>
@@ -156,5 +156,11 @@
 
         </div>
     </div>
+    
+    <dialog class="container-video-cerradura" id="container-video">
+        <video src="" id="video" class="video-cerradura">
+            
+        </video>
+    </dialog>
     
 </div>

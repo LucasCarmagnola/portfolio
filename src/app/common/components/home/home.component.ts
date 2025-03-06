@@ -22,6 +22,14 @@ export class HomeComponent {
 
     const playpen = this.el.nativeElement.querySelector('#playpen');
     const navLinks = this.el.nativeElement.querySelectorAll('.nav a');
+    const modal = document.getElementById('container-video') as HTMLDialogElement
+
+    // modal.addEventListener("click", (event) => {
+    //   if (event.target === modal) {
+    //     modal.close();
+    //   }
+    // });
+
 
     if (playpen) {
       const originalBGplaypen = window.getComputedStyle(playpen).backgroundColor;
@@ -71,7 +79,15 @@ export class HomeComponent {
       if (this.menu && menu) {
         this.menu = false;
       }
+      else if (event.target === modal) {
+        document.body.style.overflowY = "auto"
+        modal.close();
+      }
     }
+
+    modal.addEventListener("close", () => {
+      document.body.style.overflowY = "auto"
+    });
   
   }
 
@@ -122,6 +138,28 @@ export class HomeComponent {
     left: 0, 
     behavior: 'smooth' 
   });
+  }
+
+  openModal(src : string){
+    const modal = document.getElementById('container-video') as HTMLDialogElement
+    const video = document.getElementById('video') as HTMLVideoElement
+
+    video.src = src
+    modal.showModal()
+    video.play()
+
+    document.body.style.overflowY = "hidden"
+  }
+
+  closeModal(){
+    const modal = document.getElementById('container-video') as HTMLDialogElement
+    const video = document.getElementById('video') as HTMLVideoElement
+    document.body.style.overflowY = "auto"
+
+    video.pause()
+    video.src = ""
+    modal.close()
+
   }
   
 

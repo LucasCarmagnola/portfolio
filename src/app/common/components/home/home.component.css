@@ -264,6 +264,22 @@ p{
     transform: scale(1.1);
 }
 
+.container-video-cerradura{
+    height: 80%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.container-video-cerradura::backdrop {
+    background-color: rgba(95, 101, 111, 0.345);
+}
+
+.video-cerradura{
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 
@@ -290,6 +306,16 @@ p{
     }
     .content{
         padding: 10px;
+    }
+
+    .container-video-cerradura{
+        height: 80%;
+        width: 90%;
+    }
+    .video-cerradura{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -340,4 +366,7 @@ p{
     border: 1px solid #a0a0a0;
     border-bottom: 0;
   }
+
+
+
   

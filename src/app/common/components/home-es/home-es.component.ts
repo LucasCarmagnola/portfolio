@@ -22,6 +22,7 @@ export class HomeEsComponent {
 
     const playpen = this.el.nativeElement.querySelector('#playpen');
     const navLinks = this.el.nativeElement.querySelectorAll('.nav a');
+    const modal = document.getElementById('container-video') as HTMLDialogElement
 
     if (playpen) {
       const originalBGplaypen = window.getComputedStyle(playpen).backgroundColor;
@@ -72,7 +73,15 @@ export class HomeEsComponent {
       if (this.menu && menu) {
         this.menu = false;
       }
+      else if (event.target === modal) {
+        document.body.style.overflowY = "auto"
+        modal.close();
+      }
     }
+
+    modal.addEventListener("close", () => {
+      document.body.style.overflowY = "auto"
+    });
   
   }
 
@@ -107,5 +116,29 @@ cambiarMenu(){
     behavior: 'smooth' 
   });
   }
+
+
+  openModal(src : string){
+    const modal = document.getElementById('container-video') as HTMLDialogElement
+    const video = document.getElementById('video') as HTMLVideoElement
+
+    video.src = src
+    modal.showModal()
+    video.play()
+
+    document.body.style.overflowY = "hidden"
+  }
+
+  closeModal(){
+    const modal = document.getElementById('container-video') as HTMLDialogElement
+    const video = document.getElementById('video') as HTMLVideoElement
+    document.body.style.overflowY = "auto"
+
+    video.pause()
+    video.src = ""
+    modal.close()
+
+  }
+
 
 }
